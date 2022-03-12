@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "../components/Footer";
 import HeroSection from '../components/HeroSection'
 import InfoSection from "../components/InfoSection";
 import { homeObjOne, homeObjTree, homeObjTwo } from "../components/InfoSection/Data";
@@ -23,6 +24,7 @@ const toggle = () => {
         <InfoSection {...homeObjTwo}/>
         <Services />
         <InfoSection {...homeObjTree}/>
+        <Footer/>
     </>
   )
 }
