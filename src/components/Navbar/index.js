@@ -1,4 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { useEffect } from 'react'
+import { animateScroll as scroll } from 'react-scroll/modules'
 import { FaBars } from 'react-icons/fa'
 import {
     Nav,
@@ -13,26 +15,65 @@ import {
 } from './NavbarElements'
 
 const Navbar = ({toggle}) => {
+
+  const [scrollNav, setScrollNav] = useState(false)
+
+  const changeNav = ()=> {
+      if(window.scrollY >80){
+          setScrollNav(true)
+      } else {
+          setScrollNav(false)
+      }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeNav)
+  }, [])
+
+  const toggleHome = () =>{
+      scroll.scrollToTop();
+  }
+
   return (
     <>
-        <Nav>
+        <Nav scrollNav={scrollNav}>
             <NavbarContainer>
-                <NavLogo to='/'> FinanzApp </NavLogo>
+                <NavLogo to='/' onClick={toggleHome}> FinanzApp </NavLogo>
                 <MobileIcon onClick={toggle}>
                     <FaBars />
                 </MobileIcon>
                 <NavMenu>
                     <NavItem>
-                        <NavLinks to='about'>Sobre Nosotros</NavLinks>
+                        <NavLinks to='about'
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        >Sobre Nosotros</NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='discover'>Descubre</NavLinks>
+                        <NavLinks to='discover'
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        >Descubre</NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='services'>Servicios</NavLinks>
+                        <NavLinks to='services'
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        >Servicios</NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='signup'>Registrate</NavLinks>
+                        <NavLinks to='signup'
+                        smooth={true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        >Registrate</NavLinks>
                     </NavItem>
                 </NavMenu>
                 <NavBtn>
