@@ -23,7 +23,6 @@ const toggle = () => {
         <InfoSection {...homeObjOne}/>
         <InfoSection {...homeObjTwo}/>
         <Services />
-        <InfoSection {...homeObjTree}/>
         <Footer/>
     </>
   )

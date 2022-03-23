@@ -14,7 +14,7 @@ import {InfoContainer,
     Img
     } from './InfoElements.js'
 
-const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headline, darkText, description, buttonLabel, img, alt, primary, dark, dark2}) => {
+const InfoSection = ({lightBg,registro, id, imgStart, topLine, lightText, headline, darkText, description, buttonLabel,buttonDir, img, alt, primary, dark, dark2}) => {
   return (
     <>
         <InfoContainer lightBg={lightBg} id={id}>
@@ -25,19 +25,20 @@ const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headline, darkT
                             <TopLine>{topLine}</TopLine>
                             <Heading lightText={lightText}>{headline}</Heading>
                             <Subtitle darkText={darkText}>{description}</Subtitle>
-                            <BtnWrap>
+                            {/*<BtnWrap>
                                 <Button 
-                                to="home"
+                                to={buttonDir}
                                 smooth={true}
                                 duration={500}
                                 spy={true}
-                                exact="true"
+                                href={registro}
+                                exact='true'
                                 offset={-80}
                                 primary={primary ? 1 : 0}
                                 dark={dark ? 1 : 0}
                                 dark2={dark2 ? 1 : 0}
                                 >{buttonLabel}</Button>
-                            </BtnWrap>
+                            </BtnWrap>*/}
                         </TextWrapper>
                     </Column1>
                     <Column2>

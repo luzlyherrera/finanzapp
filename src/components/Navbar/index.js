@@ -67,16 +67,17 @@ const Navbar = ({toggle}) => {
                         exact='true'
                         >Servicios</NavLinks>
                     </NavItem>
-                    <NavItem>
+                    {/*<NavItem>
                         <NavLinks to='signup'
                         smooth={true}
                         duration={500}
                         spy={true}
                         exact='true'
                         >Registrate</NavLinks>
-                    </NavItem>
+                     </NavItem>*/}
                 </NavMenu>
                 <NavBtn>
+                    <NavBtnLink to='/signup'>Registro</NavBtnLink>
                     <NavBtnLink to='/signin'>Ingresa</NavBtnLink>
                 </NavBtn>
             </NavbarContainer>

@@ -25,12 +25,12 @@ const Sidebar = ({isOpen, toggle}) => {
                     Descubre
                 </SidebarLink>
                 <SidebarLink to='services' onClick={toggle}>
-                    Servicios
-                </SidebarLink>
-                <SidebarLink to='signup' onClick={toggle}>
-                    Registrate
+                    Serviciosss
                 </SidebarLink>
             </SidebarMenu>
+            <SideBtnWrap>
+                <SidebarRoute to='/signup'>Registro</SidebarRoute>
+            </SideBtnWrap>
             <SideBtnWrap>
                 <SidebarRoute to='/signin'>Ingresa</SidebarRoute>
             </SideBtnWrap>
