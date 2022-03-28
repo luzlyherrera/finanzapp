@@ -11,6 +11,7 @@ import {
     FormButton,
     Text
  } from './SigninElements'
+ import './signin.css';
 
 const SignIn = () => {
   return (
@@ -18,13 +19,13 @@ const SignIn = () => {
         <FormWrap>
             <Icon to="/">FinanzApp</Icon>
             <FormContent>
-                <Form action='#'>
+                <Form>
                     <FormH1>Ingresa a tu Cuenta</FormH1>
                     <FormLabel htmlFor='for'>Email</FormLabel>
                     <FormInput type='email' required/>
                     <FormLabel htmlFor='for'>Contraseña</FormLabel>
                     <FormInput type='password' required/>
-                    <FormButton type='submit'>Continuar</FormButton>
+                    <FormButton type='submit'><a href='/finance'>Continuar</a></FormButton>
                     <Text>Olvide mi Contraseña</Text>
                 </Form>
             </FormContent>

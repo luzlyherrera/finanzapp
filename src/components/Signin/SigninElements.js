@@ -99,6 +99,7 @@ export const FormButton =styled.button`
     color: #fff;
     font-size: 20px;
     cursor: pointer;
+    text-decoration: none;
 `;
 
 export const Text =styled.span`

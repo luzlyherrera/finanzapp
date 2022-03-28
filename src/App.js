@@ -5,6 +5,7 @@ import {BrowserRouter as Router,
 import Home from './pages';
 import SigninPage from './pages/signin';
 import SignupPage from './pages/signup';
+import FinancePage from './pages/finance';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path="/" element={<Home />} exact /> 
       <Route path="/signin" element={<SigninPage />} exact />
       <Route path="/signup" element={<SignupPage />} exact />
+      <Route path="/finance" element={<FinancePage />} exact />
       </Routes>
     </Router>
   );
